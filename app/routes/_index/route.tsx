@@ -1,7 +1,7 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
-import { useOptionalUser } from "~/utils";
+import { useOptionalUser } from "~/modules/auth/utils";
 
 export const meta: V2_MetaFunction = () => [{ title: "Remix Notes" }];
 
@@ -22,7 +22,7 @@ export default function Index() {
             </div>
             <div className="relative px-4 pb-8 pt-16 sm:px-6 sm:pb-14 sm:pt-24 lg:px-8 lg:pb-20 lg:pt-32">
               <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-8xl lg:text-6xl">
-                <span className="block uppercase text-red-300 drop-shadow-md">
+                <span className="block uppercase text-amber-200 drop-shadow-md">
                   With Dev Containers
                 </span>
               </h1>
