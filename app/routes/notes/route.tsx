@@ -2,8 +2,7 @@ import type { LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Form, Link, Outlet, useLoaderData } from "@remix-run/react";
 
-import { requireUserId } from "~/modules/auth/infrastructure";
-import { useUser } from "~/modules/auth/utils";
+import { requireUserId, useUser } from "~/modules/auth/infrastructure";
 import { getNoteListItems } from "~/modules/note/infrastructure";
 
 import { NoteLinkList } from "./NoteLinkList";
