@@ -13,6 +13,7 @@ import {
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "~/modules/auth/infrastructure";
+import { AuthProvider, authService } from "./modules/auth/application";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -34,7 +35,9 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full">
-        <Outlet />
+        <AuthProvider value={authService}>
+          <Outlet />
+        </AuthProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
